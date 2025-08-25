@@ -10,6 +10,8 @@
     --get-in-touch-border: 1px solid #FFFFFF;
     --get-in-touch-background-hover: #1E1E28;
     --get-in-touch-border-hover: 1px solid #FFFFFF;
+    --elipse-gradient-start: #5BADFF ;
+    --elipse-gradient-end: #1373D1 ;
 
 * {
     color: var(--primary-text) !important; 
@@ -147,6 +149,11 @@ p {
     color: transparent !important;
 }
 
+.hero-section {
+    position: relative;
+    overflow: hidden;
+}
+
 .profile-avatar {
     width: 150px;
     height: 150px;
@@ -208,6 +215,7 @@ p {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
     padding: 14px 30px;
     gap: 10px;
     width: 155px;
@@ -233,6 +241,11 @@ p {
     color: #FFFFFF;
 }
 
+.projects-section {
+    position: relative;
+    overflow: hidden;
+}
+
 #projects {
     font-size: 48px !important;
     font-family: Poppins;
@@ -240,7 +253,10 @@ p {
     line-height: 3rem;
 }
 
-
+.salesforce-section {
+    position: relative;
+    overflow: hidden;
+}
 
 #salesforce-text{
     font-size: 24px !important;
@@ -249,8 +265,57 @@ p {
     line-height: 2rem;
 }
 
+#experience-text {
+    font-size: 14px !important;
+    font-family: Inter;
+    letter-spacing: -0.03em;
+    line-height: 1.5rem;
+}
+
+.ellipse-bg-left {
+    position: absolute;
+    width: 510px;
+    height: 432px;
+    background: linear-gradient(180deg, var(--elipse-gradient-start) 0%, var(--elipse-gradient-end) 100%);
+    opacity: 0.6;
+    filter: blur(91px);
+    transform: rotate(-158deg) scale(0.75);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.ellipse-bg-right {
+    box-sizing: border-box;
+    position: absolute;
+    width: 510px;
+    height: 432px;
+    left: -152px;
+    top: 234px;
+    background: linear-gradient(180deg, var(--elipse-gradient-start) 0%, var(--elipse-gradient-end) 100%);
+    opacity: 0.6;
+    border: 1px solid #000000;
+    filter: blur(91px);
+    z-index: -1;
+    pointer-events: none;
+}
 
 
+.hero-section .ellipse-bg-left {
+    right: -200px;
+    top: 35px;
+}
 
+.hero-section .ellipse-bg-right {
+    left: -200px;
+    top: 50px;
+}
 
+.salesforce-section .ellipse-bg-left {
+    right: -200px;
+    top: 35px;
+}
 
+.salesforce-section .ellipse-bg-right {
+    left: -200px;
+    top: 50px;
+}       
